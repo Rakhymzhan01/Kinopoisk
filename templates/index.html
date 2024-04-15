@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinoposk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #000;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-brand {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .navbar-links li {
+            margin-right: 20px;
+        }
+        .navbar-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .search-icon {
+            color: #fff;
+            cursor: pointer;
+        }
+        .search-box {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #333;
+            padding: 10px;
+        }
+        .search-box input[type="text"] {
+            width: 200px;
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#" class="navbar-brand">Kinoposk</a>
+    <ul class="navbar-links">
+        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-tv"></i> TV Shows</a></li>
+        <li><a href="#"><i class="fas fa-film"></i> Movies</a></li>
+        <li><a href="#"><i class="fas fa-calendar-alt"></i> Latest</a></li>
+        <li><a href="#"><i class="fas fa-list"></i> My List</a></li>
+    </ul>
+    <div class="search-icon" onclick="toggleSearchBox()"><i class="fas fa-search"></i></div>
+    <div class="search-box" id="searchBox">
+        <input type="text" placeholder="Search for movies...">
+    </div>
+</div>
+
+<script>
+    function toggleSearchBox() {
+        var searchBox = document.getElementById("searchBox");
+        if (searchBox.style.display === "none") {
+            searchBox.style.display = "block";
+        } else {
+            searchBox.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
