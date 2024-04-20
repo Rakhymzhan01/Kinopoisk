@@ -1,0 +1,51 @@
+
+.app {
+  background-color: #141414; /* Netflix-like background */
+  color: #fff; /* Light text color for readability */
+  font-family: 'Arial', sans-serif; /* Default Netflix font */
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  width: 200px; /* Width of the movie card */
+  margin: 20px; /* Space around the card */
+  overflow: hidden; /* Ensures content fits in the card */
+  border-radius: 8px; /* Rounded corners like Netflix cards */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.movie:hover {
+  transform: scale(1.05); /* Slightly enlarges the card on hover */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.8); /* Stronger shadow for lifted effect */
+}
+
+.movie img {
+  display: block; /* Removes any inline spacing */
+  width: 100%; /* Makes the image fill the card */
+  height: auto; /* Maintains aspect ratio */
+  transition: transform 0.3s ease; /* Smooth transition for the image */
+}
+
+.movie img:hover {
+  transform: scale(1.1); /* Slightly enlarges the image on hover */
+}
+
+.movie h2 {
+  font-size: 1rem; /* Smaller title size for the card */
+  margin: 10px; /* Spacing around the title */
+}
+
+.movie p {
+  font-size: 0.8rem; /* Smaller text size for details */
+  margin: 5px 10px; /* Spacing around text */
+  color: #e5e5e5; /* Netflix-like text color */
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .movie {
+    width: 150px; /* Smaller cards on narrow screens */
+  }
+}

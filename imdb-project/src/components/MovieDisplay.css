@@ -1,0 +1,36 @@
+/* MoviesDisplay.css */
+.movies-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.movie-display {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-image {
+    width: 120px; /* Adjust as necessary */
+    margin-right: 20px;
+}
+
+.movie-details {
+    flex: 1;
+}
+
+.movie-title {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 24px;
+}
+
+.movie-info {
+    margin: 5px 0;
+    color: #666;
+}

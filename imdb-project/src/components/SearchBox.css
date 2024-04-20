@@ -1,0 +1,48 @@
+.movie-container {
+  display: flex;
+  align-items: flex-start; /* Align the items to the top */
+  margin-bottom: 20px; /* Space between movie entries */
+  background-color: #fff; /* White background for legibility */
+  padding: 20px; /* Padding around the content */
+}
+
+.movie-image {
+  max-width: 150px; /* Set the maximum width of the image */
+  margin-right: 20px; /* Space between the image and the movie info */
+}
+
+.movie-info {
+  flex: 1; /* Take up the remaining space */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.movie-info h2 {
+  margin-top: 10px;
+  color: white; /* Black color for the movie title */
+}
+
+.movie-info p {
+  margin: 4px 0; /* Margins for paragraph spacing */
+  color: white; /* Dark grey color for the movie info */
+  margin-right: 25px;
+}
+
+.error-message {
+  color: red;
+  /* Additional error message styles */
+}
+
+.movie-container {
+  display: flex;
+  margin-top: 20px; /* Add space above the movie display */
+}
+
+.movie-poster {
+  max-width: 150px; /* Adjust the size as needed */
+  margin-right: 20px; /* Add space between the poster and the details */
+}
+
+.movie-details {
+  flex: 1; /* Allows the details to fill the rest of the space */
+  /* Additional styling for text can go here */
+}
