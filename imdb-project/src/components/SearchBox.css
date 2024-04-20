@@ -1,48 +1,88 @@
-.movie-container {
-  display: flex;
-  align-items: flex-start; /* Align the items to the top */
-  margin-bottom: 20px; /* Space between movie entries */
-  background-color: #fff; /* White background for legibility */
-  padding: 20px; /* Padding around the content */
+.search-container {
+    display: flex;
+    align-items: center; /* Aligns vertically */
+    flex-direction: column;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 5px;
+    background: #141414;
+    border-radius: 5px;
 }
 
-.movie-image {
-  max-width: 150px; /* Set the maximum width of the image */
-  margin-right: 20px; /* Space between the image and the movie info */
+.search-input {
+  padding: 10px;
+  margin-right: 10px; /* Creates a little space between the input and the button */
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.movie-info {
-  flex: 1; /* Take up the remaining space */
-  overflow: hidden; /* Prevent overflow */
-}
-
-.movie-info h2 {
-  margin-top: 10px;
-  color: white; /* Black color for the movie title */
-}
-
-.movie-info p {
-  margin: 4px 0; /* Margins for paragraph spacing */
-  color: white; /* Dark grey color for the movie info */
-  margin-right: 25px;
+.search-button {
+  padding: 10px;
+  background-color: #333; /* Dark background for the button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .error-message {
-  color: red;
-  /* Additional error message styles */
+    color: red;
+    margin-top: 10px;
 }
 
 .movie-container {
-  display: flex;
-  margin-top: 20px; /* Add space above the movie display */
+    display: flex;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
 }
 
 .movie-poster {
-  max-width: 150px; /* Adjust the size as needed */
-  margin-right: 20px; /* Add space between the poster and the details */
+    width: 150px; /* Adjust as needed */
+    object-fit: cover; /* Keeps aspect ratio, but crops the image if needed */
 }
 
 .movie-details {
-  flex: 1; /* Allows the details to fill the rest of the space */
-  /* Additional styling for text can go here */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-details h2 {
+    margin: 0;
+    color: #ffeb3b; /* Gold color for the title */
+    font-size: 1.5rem;
+}
+
+.movie-details p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* You might need to adjust the breakpoints and sizes for responsiveness */
+@media (max-width: 768px) {
+    .search-input {
+        width: calc(100% - 70px); /* Smaller button on mobile */
+    }
+
+    .search-button {
+        width: 60px;
+        font-size: 0.8rem;
+    }
+
+    .movie-container {
+        flex-direction: column;
+    }
+
+    .movie-poster {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .movie-details {
+        width: 100%; /* Full width on mobile */
+        padding: 10px;
+    }
 }

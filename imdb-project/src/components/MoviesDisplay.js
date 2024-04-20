@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './MovieDisplay.css';
 
 const MoviesDisplay = () => {
     const [movies, setMovies] = useState([]);
@@ -11,28 +12,24 @@ const MoviesDisplay = () => {
     }, []);
 
     return (
-        <div className="movies-container">
-            {movies.map((movie, index) => (
-                <div key={index} className="movie-display">
-                    <div className="movie-image">
-                        {movie.poster && <img src={movie.poster} alt={`Poster of ${movie.title}`} />}
-                    </div>
-
-                        <div className="movie-title">
-                        <h2>{movie.title} {movie.year}</h2>
-                            </div>
-                        <div className="movie-info">
-                        <p>Genre: {movie.genre}</p>
-                        <p>Duration: {movie.duration}</p>
-                        <p>Director: {movie.director}</p>
-                        <p>Actors: {movie.actors}</p>
-                        <p>Plot: {movie.plot}</p>
-                        <img src={movie.image_link} alt={`Poster of ${movie.title}`} />
-                    </div>
-                </div>
-            ))}
+    <div className="movies-container">
+      {movies.map((movie, index) => (
+        <div key={index} className="movie-display">
+          <div className="movie-image">
+            <img src={movie.image_link} alt={`Poster of ${movie.title}`} className="movie-poster" />
+          </div>
+          <div className="movie-info">
+            <h2 className="movie-title">{movie.title} ({movie.year})</h2>
+            <p className="movie-genre">Genre: {movie.genre}</p>
+            <p className="movie-duration">Duration: {movie.duration}</p>
+            <p className="movie-director">Director: {movie.director}</p>
+            <p className="movie-actors">Actors: {movie.actors}</p>
+            <p className="movie-plot">Plot: {movie.plot}</p>
+          </div>
         </div>
-    );
+      ))}
+    </div>
+  );
 };
 
 export default MoviesDisplay;
