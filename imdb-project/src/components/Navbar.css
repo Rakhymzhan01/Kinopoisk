@@ -1,0 +1,51 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #000;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-brand {
+            color: red; /* Adjust the color as needed */
+            font-family: 'Bebas Neue', sans-serif; /* Adds the Bebas Neue font */
+            font-size: 3rem; /* Adjust the size as needed for your layout */
+            font-weight: bolder;
+            flex-grow: 1;
+            text-align: left;
+        }
+        .navbar-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .navbar-links li {
+            margin-right: 20px;
+        }
+        .navbar-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .search-icon {
+            color: #fff;
+            cursor: pointer;
+        }
+        .search-box {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #333;
+            padding: 10px;
+        }
+        .search-box input[type="text"] {
+            width: 200px;
+            padding: 5px;
+            font-size: 16px;
+        }
